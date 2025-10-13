@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Home</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <style>
+    /* ====== GENERAL RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    h5 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* ====== MAP SECTION ====== */
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      background-color: #eee;
+    }
+
+    /* Status text for map accessibility (moved from inline styles) */
+    #mapStatus {
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    /* ====== FORM STYLES ====== */
+    form {
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      text-align: left;
+      color: #fff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border: 2px solid #fff;
+    }
+
+    /* ====== BUTTONS ====== */
+    a button {
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 8px;
+      transition: 0.3s;
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+  <div id="mapStatus" aria-live="polite"></div>
+  <h5>Raahi Cab</h5>
+  <p>Welcome to Raahi Cab</p>
+
+  <h3>Our map to help you book a cab easily</h3>
+  <div id="map"></div>
+  
+  <div class="controls">
+    <button id="markBtn">Mark Location</button>
+    <button id="stopBtn">Stop Tracking</button>
+    <div id="markedLocation" aria-live="polite" class="marked-location"></div>
+  </div>
+
+  <form>
+    <label for="wherefrom">Where From</label>
+    <input type="text" id="wherefrom" name="wherefrom" placeholder="Enter your pickup location">
+
+    <label for="whereto">Where To</label>
+    <input type="text" id="whereto" name="whereto" placeholder="Enter your destination">
+  </form>
+
+  <a href="tracklivelocationofdriver.html"><button>Book your Ride</button></a>
+  <a href="homepage.html"><button>Home</button></a>
+  <a href="booking.html"><button>Book Now</button></a>
+  <a href="settings.html"><button>Settings</button></a>
+
+  <script src="javascript.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl31dRsHSFtkEARVOLmckk96xSTgNlsMo&callback=initMap">
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Dashboard</title>
+
+  <style>
+    /* ====== BASIC RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ====== PAGE BACKGROUND ====== */
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* ====== HEADER ====== */
+    h5 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* ====== BUTTON CONTAINER ====== */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    /* ====== BUTTON STYLE ====== */
+    a button {
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    /* ====== MOBILE ADJUSTMENTS ====== */
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 15px;
+      }
+      h5 {
+        font-size: 24px;
+      }
+      a button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h5>Raahi Cab</h5>
+
+  <div class="button-container">
+    <a href="profile.html"><button>Profile</button></a>
+    <a href="payment.html"><button>Payment</button></a>
+    <a href="history.html"><button>History</button></a>
+    <a href="support.html"><button>Support</button></a>
+    <a href="login.html"><button>Logout</button></a>
+  </div>
+</body>
+</html>
+

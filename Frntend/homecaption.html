@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ====== GENERAL RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    h5 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* ====== MAP SECTION ====== */
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin: 15px 0;
+      background-color: #eee;
+    }
+
+    #mapStatus {
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    /* ====== BUTTON STYLES ====== */
+    button, a button {
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 8px;
+      transition: 0.3s;
+    }
+
+    button:hover, a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* ====== LAYOUT SPACING ====== */
+    .button-group {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <h5>Raahi Cab</h5>
+  <p>Welcome, Driver!</p>
+
+  <div id="map"></div>
+  <div id="mapStatus" aria-live="polite">Loading map...</div>
+
+  <div class="button-group">
+    <button id="goOnline">Go Online</button>
+    <button id="goOffline">Go Offline</button>
+  </div>
+
+  <div class="button-group">
+    <a href="homecaption.html"><button>Home</button></a>
+    <a href="Earnings.html"><button>View Earnings</button></a>
+    <a href="profile.html"><button>Profile</button></a>
+  </div>
+
+  <script>
+    // ====== GOOGLE MAP SCRIPT ======
+    function initMap() {
+      const mapOptions = {
+        center: { lat: 28.6139, lng: 77.2090 }, // Default: New Delhi
+        zoom: 12,
+      };
+      const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      // Try getting current location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userLocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            map.setCenter(userLocation);
+            new google.maps.Marker({
+              position: userLocation,
+              map,
+              title: "Your Current Location",
+            });
+            document.getElementById("mapStatus").innerText = "You are here!";
+          },
+          () => {
+            document.getElementById("mapStatus").innerText = "Unable to fetch your location.";
+          }
+        );
+      } else {
+        document.getElementById("mapStatus").innerText = "Geolocation not supported.";
+      }
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl31dRsHSFtkEARVOLmckk96xSTgNlsMo&callback=initMap">
+  </script>
+</body>
+</html>

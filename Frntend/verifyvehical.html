@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Verify Vehicle</title>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    h5 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    /* ===== FORM STYLES ===== */
+    form {
+      background: rgba(255,255,255,0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border: 2px solid #fff;
+    }
+
+    /* ===== BUTTON STYLES ===== */
+    a {
+      text-decoration: none;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    a button {
+      width: 100%;
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      h5 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+      form {
+        padding: 15px;
+      }
+      a button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h5>Verify Vehicle Details</h5>
+  <p>Please enter your vehicle details for verification</p>
+
+  <form>
+    <label for="vehiclenumber">Vehicle Number</label>
+    <input type="text" id="vehiclenumber" name="vehiclenumber" placeholder="Enter Vehicle Number">
+
+    <label for="vehiclecolor">Vehicle Color</label>
+    <input type="text" id="vehiclecolor" name="vehiclecolor" placeholder="Enter Vehicle Color">
+
+    <label for="vehiclecapacity">Vehicle Capacity</label>
+    <input type="text" id="vehiclecapacity" name="vehiclecapacity" placeholder="Enter Vehicle Capacity">
+
+    <label for="vehiclemodal">Vehicle Model</label>
+    <input type="text" id="vehiclemodal" name="vehiclemodal" placeholder="Enter Vehicle Model">
+  </form>
+
+  <a href="requestcaption.html">
+    <button>Request for Approval</button>
+  </a>
+</body>
+</html>

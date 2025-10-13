@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Captain Signup</title>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    h5 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* ===== FORM STYLES ===== */
+    form {
+      background: rgba(255,255,255,0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border: 2px solid #fff;
+    }
+
+    /* ===== BUTTON STYLES ===== */
+    a {
+      text-decoration: none;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    a button {
+      width: 100%;
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      h5 {
+        font-size: 24px;
+      }
+      form {
+        padding: 15px;
+      }
+      a button {
+        font-size: 15px;
+      }
+    }
+  <h5>Raahi Cab</h5>
+
+  <form>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <label for="comfirmpassword">Confirm Password</label>
+    <input type="password" id="comfirmpassword" name="comfirmpassword" placeholder="Confirm your password">
+  </form>
+
+  <a href="verifyvehical.html">
+    <button>Verify Vehicle Details</button>
+  </a>
+</body>
+</html>

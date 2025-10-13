@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Choose Role</title>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h5 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    /* ===== BUTTON STYLES ===== */
+    a {
+      text-decoration: none;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    a button {
+      width: 100%;
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      h5 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 14px;
+      }
+      a button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h5>Raahi Cab</h5>
+  <p>Welcome to Raahi Cab! Choose your role:</p>
+
+  <a href="login.html">
+    <button>As Passenger</button>
+  </a>
+
+  <a href="logincaption.html">
+    <button>As Captain</button>
+  </a>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raahi Cab - Request Submitted</title>
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ===== BODY STYLING ===== */
+    body {
+      background: linear-gradient(135deg, #1e90ff, #00bcd4);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ===== HEADER ===== */
+    h5 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    /* ===== MESSAGE ===== */
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    /* ===== BUTTON STYLING ===== */
+    a {
+      text-decoration: none;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    a button {
+      width: 100%;
+      background-color: #fff;
+      color: #1e90ff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease;
+    }
+
+    a button:hover {
+      background-color: #1e90ff;
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    }
+
+    /* ===== SUCCESS ANIMATION ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      h5 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 16px;
+      }
+      a button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h5>Raahi Cab</h5>
+  <h6></h6>
+  <p>Hi there! Your request for Captain <br> has been submitted successfully 🚗. We send a Email soon for confirmation</p>
+
+  <a href="captionpassenger.html">
+    <button>Go Back</button>
+  </a>
+</body>
+</html>
